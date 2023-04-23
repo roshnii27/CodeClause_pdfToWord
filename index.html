@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d989b12f15.js" crossorigin="anonymous"></script>
+
+
+    <title>PDF to WORD Converter</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <ul class="nav">
+            <div id="menu">
+
+              
+
+                <li> <a href="index.html">HOME</a></li>
+                <li><a href="">SPLIT PDF</a></li>
+                <li><a href="">COMPRESS PDF</a></li>
+                <li><a class="active" href="">CONVERT PDF to WORD</a></li>
+                <li><a href="">ALL PDF TOOLS</a></li>
+
+            </div>
+
+            <div class="right2">
+
+             
+                <div class="signin">
+                    <li> <a href="signin.html">Sign up</a></li>
+                </div>
+                <div class="login">
+                    <li> <a href="login.html"><span>Login</span></a></li>
+
+                </div>
+
+                <div class="desk">
+                    <li> <a href="" title="Desktop"><i class="fa-solid fa-desktop"></i>
+                        </a></li>
+                </div>
+
+            </div>
+
+            <div class="topnavs">
+                <div id="myLinks">
+
+
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+
+                </a>
+
+            </div>
+
+
+
+
+    </div>
+    <section id="body1">
+        &nbsp;
+
+        <h1 class="one">
+            PDF to WORD Converter
+        </h1>
+        <h2 class="two">
+            Convert your PDF to WORD documents with incredible accuracy.
+            Powered by <span style="color: rgb(235, 88, 88);">Solid Documents.</h2></span>
+        <div class="btn0">
+
+
+          
+            <input type="file" id="fileInput">
+           
+                <button class="filebtn">Choose file</button><span class="filelabel"></span><button class="btnload"onclick="loadPDF()">Convert To WORD</button>
+            <div id="pdfContainer"></div>
+            
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+       
+<script> Array.prototype.forEach.call(document.querySelectorAll('.filebtn'),function(button){
+const hiddenInput = button.parentElement.querySelector('#fileInput');
+const label =button.parentElement.querySelector('.filelabel');
+const defaulLabelText ='No file(s) Selected';
+
+label.textContent = defaulLabelText;
+label.title = defaulLabelText;
+button.addEventListener('click',function(){
+    hiddenInput.click();
+});
+hiddenInput.addEventListener('change' ,function (){
+    const filenameList = Array.prototype.map.call(hiddenInput.files, function (file){
+        return file.name;
+    });
+    label.textContent = filenameList.join(' ,') || defaulLabelText;
+});
+});
+
+</script>
+</div>
+</section>
+</body>
+<script src="java.js"></script>
+
+
+</html>
